@@ -1,0 +1,101 @@
+﻿<Window
+    x:Class="UD02_Ejercicio05.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:UD02_Ejercicio05"
+    mc:Ignorable="d"
+    Title="Formato a un texto"
+    Height="450"
+    Width="800"
+    Icon="/tuerca.ico">
+    <Grid>
+        <TextBlock
+            HorizontalAlignment="Left"
+            Margin="88,91,0,0"
+            Text="Texto"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="-0.333,-1.537" />
+        <TextBox
+            x:Name="textoTextBox"
+            HorizontalAlignment="Left"
+            Margin="88,112,0,0"
+            Text=""
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Width="197"
+            Height="84"
+            TextChanged="textoTextBox_TextChanged" />
+
+        <TextBlock
+            x:Name="textoTextBlock"
+            HorizontalAlignment="Left"
+            Margin="88,250,0,0"
+            Text=""
+            TextTrimming="CharacterEllipsis"
+            VerticalAlignment="Top"
+            RenderTransformOrigin="-0.333,-1.537"
+            Height="40"
+            Width="618"
+            Background="#FFE6E172" />
+
+        <CheckBox
+            x:Name="negritaCheckBox"
+            Content="Negrita"
+            HorizontalAlignment="Left"
+            Margin="340,113,0,0"
+            VerticalAlignment="Top"
+            Height="18"
+            Width="71"
+            FontWeight="Bold"
+            Checked="EstiloTextoCheckBox_Checked"
+            Unchecked="EstiloTextoCheckBox_Unchecked" />
+        <CheckBox
+            x:Name="cursivaCheckBox"
+            Content="cursiva"
+            HorizontalAlignment="Left"
+            Margin="435,112,0,0"
+            VerticalAlignment="Top"
+            Height="19"
+            Width="84"
+            FontStyle="Italic"
+            Checked="EstiloTextoCheckBox_Checked"
+            Unchecked="EstiloTextoCheckBox_Unchecked" />
+
+        <TextBlock
+            HorizontalAlignment="Left"
+            Margin="551,112,0,0"
+            Text="Color del texto"
+            TextWrapping="Wrap"
+            VerticalAlignment="Top"
+            Height="19"
+            Width="86" />
+        <RadioButton
+            x:Name="azulRadioBoton"
+            GroupName="coloresTextoRadioBoton"
+            Content="Azul"
+            IsChecked="True"
+            HorizontalAlignment="Left"
+            Margin="663,93,0,0"
+            VerticalAlignment="Top"
+            Click="colorRadioBoton_Click" />
+        <RadioButton
+            x:Name="rojoRadioBoton"
+            GroupName="coloresTextoRadioBoton"
+            Content="Rojo"
+            HorizontalAlignment="Left"
+            Margin="663,113,0,0"
+            VerticalAlignment="Top"
+            Click="colorRadioBoton_Click" />
+        <RadioButton
+            x:Name="verdeRadioBoton"
+            GroupName="coloresTextoRadioBoton"
+            Content="Verde"
+            HorizontalAlignment="Left"
+            Margin="663,132,0,0"
+            VerticalAlignment="Top"
+            Click="colorRadioBoton_Click" />
+    </Grid>
+</Window>
